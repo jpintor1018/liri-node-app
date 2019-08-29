@@ -18,6 +18,10 @@ if(userInput=="movie-this")
     axios.get("http://www.omdbapi.com/?t=" + userSearch + "&y=&plot=short&apikey=trilogy").then(
   function(response) {
       console.log("\n----Movie Information----\n".bold.underline.bgRed)
+      console.log("  (|_|) ")
+      console.log("  (-_-) ")
+      console.log("<=( 0 ) =>") 
+      console.log("(').|.(')\n");
     console.log("Title: ".underline.red + response.data.Title);
     console.log("Release Date: ".underline.yellow + response.data.Year);
     console.log("IMDB Rating: ".underline.cyan + response.data.imdbRating);
@@ -53,7 +57,7 @@ else if(userInput=="spotify-this-song"){
     }
     spotify.search({type: 'track',query: userSearch}).then(function(response){
         console.log("\n====Spotify This Song====\n".bold.underline.bgRed);
-        for(var j=0;j<7;j++){
+        for(var j=0;j<6;j++){
             console.log("Artist: ".underline.red + response.tracks.items[j].artists[0].name);
             console.log("Song Title: ".underline.cyan + response.tracks.items[j].name);
             console.log("Album: ".underline.green + response.tracks.items[j].album.name);
